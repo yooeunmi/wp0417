@@ -10,7 +10,26 @@
 
 <body>
     <h1>폼</h1>
-    <p>폼(양식)? 검색 창, 로그인 창, 회원가입, 게시판</p>
+    <p>폼(양식)? 검색 창, 로그인 창, 회원가입 페이지, 게시판 페이지</p>
+
+    <!-- 
+        <form>: 폼의 요소를 담기 위한 컨테이너
+        <fieldset>: 폼의 그룹핑
+        <legend>: fieldset의 캡션
+        <input type="">: 한 줄 입력 폼
+            type: text, password, search, tel, email, url
+            type: submit, reset, button, image, file
+            type: checkbox, radio
+        <label>: 레이블
+        <button type="">: 버튼
+            type: submit, reset, button
+        <textarea>: 여러 줄 입력
+        <select>: 선택 목록
+            <option>: 목록의 항목
+            <optgroup>: 목록의 항목을 그룹핑
+        <datalist>: 선택 목록 + 입력
+     -->
+
     <!-- 서버 프로그래밍언어: php, jsp, asp -->
     <!-- 자동 완성 기능:  autocomplete="on" -->
     <form action="action_page.php" method="get">
@@ -18,21 +37,32 @@
         <fieldset>
             <legend>검색 창</legend>
             <!-- 검색 입력 상자 -->
-            구글 검색:
-            
+            <!-- alt + w -->
+            <!-- label의 for속성과 input의 id속성이 같은 값을 지정한다. -->
+            <label for="google">구글 검색:</label>
+            <input type="search" id="google" name="google">
+
             <!-- 검색 버튼 -->
+            <!-- value는 버튼의 이름 -->
+            <input type="submit" value="검색">
+            <button type="submit">검색</button>
 
         </fieldset>
 
         <fieldset>
-            <legend>로그인</legend>
+            <legend>로그인 창</legend>
 
             <!-- 아이디 -->
-            아이디:
+            <!-- 카멜표기법: 여러 개의 단어일 때 두 번째 단어부터 첫 글자를 대문자 -->
+            <!-- id의 값은 임의로 지정한다. -->
+            <label for="myId">아이디:</label>
+            <input type="text" id="myId" name="myId">
             <!-- 패스워드 -->
-            패스워드:
+            <label for="myPw">패스워드:</label>
+            <input type="password" id="myPw" name="myPw">
 
             <!-- 로그인 버튼 -->
+            <input type="submit" value="로그인">
 
         </fieldset>
 
@@ -42,31 +72,85 @@
             <!-- 이용 약관 -->
             <div>
                 <!-- 체크박스 -->
-                ooo 이용약관 동의(필수)
+                <!-- value는 서버로 전송될 값 -->
+                <input type="checkbox" id="chk" name="chk" value="on" checked>
+                <label for="chk">ooo 이용약관 동의(필수)</label>
+
+                <!-- 라디오 버튼 -->
+                <!-- value는 서버로 전송될 값 -->
+                <!-- name을 같은 값으로 지정해야 한다. -->
+                <input type="radio" name="agree" value="yes" checked>동의 함
+                <input type="radio" name="agree" value="no">동의 하지 않음
             </div>
 
             <div>
                 <!-- 글상자 -->
-                여러분을 환영합니다. ooo 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 -중략-
+                <!-- 
+                    cols: 열
+                    rows: 행
+                 -->
+                <textarea name="rule" id="" cols="50" rows="4" readonly>여러분을 환영합니다. ooo 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 -중략-</textarea>
             </div>
 
             <div>
                 <!-- text 입력 상자 -->
-                생년월일
+                <label for="birth">생년월일</label>
+                <!-- placeholder은 입력할 내용에 대한 설명글 -->
+                <input type="text" id="birth" placeholder="년(4자)" size="4" maxlength="4">
                 <!-- 목록 상자 -->
-                월
+                <select name="month" id="">
+                    <!-- shift+alt+위/아래방향키 -->
+                    <!-- value는 전송값 -->
+                    <option value="">월</option>
+                    <optgroup label="겨울">
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </optgroup>
+                    <optgroup label="봄">
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                    </optgroup>
+                    <optgroup label="여름">
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </optgroup>
+                    <optgroup label="가을">
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </optgroup>
+                </select>
                 <!-- text 입력 상자 -->
+                <input type="text" placeholder="일" size="2" maxlength="2">
             </div>
 
             <div>
                 <!-- 이메일 -->
-                본인 확인 이메일<span>(선택)</span>
+                본인 확인
+                <label for="my_email">이메일</label>
+                <input type="email" id="my_email" name="my_email">
             </div>
 
             <div>
                 <!-- 전화번호 -->
-                휴대전화
+                <label for="my_tel">휴대전화</label>
+                <input type="tel" id="my_tel" name="my_tel">
             </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>좋아하는 프로그램 언어 목록</legend>
+             <!-- input의 lang속성과 datalist의 id속성의 값이 같아야 한다. -->
+            <input type="text" list="lang">
+            <datalist id="lang">
+                <option value="html">
+                <option value="css">
+                <option value="Javascript">
+                <option value="Jquery">
+            </datalist>
         </fieldset>
     </form>
 </body>

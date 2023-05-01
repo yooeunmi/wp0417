@@ -13,7 +13,6 @@
         html {color:red;}
         body {color:red;}
         h1 {color:red;}
-        h2 {color:red;}
         ul {color:red;}
         li {color:red;}
 
@@ -21,13 +20,24 @@
             그룹(Grouping) 선택자:
             선택자1, 선택자2, ...
         */
-
+        html, body, h1, ul, li {
+            color:red;
+        }
 
         /* 범용(Universal, 전체) 선택자 */
-        
+        * {
+            color:red;
+        }
 
     </style>
 </head>
+<!-- body의 부모는 html -->
+<!-- body의 자식은 h1, ul -->
+<!-- ul의 자식은 li -->
+<!-- body의 손자는 li -->
+<!-- body의 하위(자식+손자) 요소는 h1, ul, li  -->
+<!-- h1의 제(동생)은 ul -->
+<!-- li의 조상(부모 포함)은 ul, body, html -->
 <body>
     <h1>선택자</h1>
     <ul>

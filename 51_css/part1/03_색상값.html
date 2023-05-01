@@ -8,16 +8,64 @@
     <style>
         /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp */
 
-        /* HEX: 16진수 -> 0~9, A~F */
-        /* #RRGGBB 또는 #RGB */
+        /* 
+            2진수: 0,1
+            8진수: 0 ~ 7
+            16진수: 0 ~ 9, A ~ F
+            10진수: 0 ~ 9
+        */
 
+        /* HEX: 16진수 -> 0~9, A~F */
+        /* #RRGGBB 또는 #RGB  -> 빛의 혼합 */       
+        /* 
+            6자 또는 3자
+            #000000 -> black
+            #FFFFFF -> white
+            #FF0000 -> red -> #F00
+            #0000FF -> blue
+            #FFFF00 -> yellow 
+            #FF00FF -> magenta -> #F0F           
+            #00ffff -> cyan
+        */
+        
         /* rgb(0~255, 0~255, 0~255) */  
+        /* 
+            rgb(R, G, B)
+            rgb(0, 0, 0)
+            rgb(255, 255, 255)
+            rgb(255, 0, 0)
+        */
 
         /* rgba(0~255, 0~255, 0~255, 0~1) */
+        /* 
+            rgba(R, G, B, alpha)
+            alpha는 투명도 (0:투명, 1:불투명, 0.5:반투명)
+            rgba(0, 0, 0, 0.5)
+            콤마(,) 사이 공백 생략 가능
+            0.5에서 소숫점 앞의 0은 생략 가능
+            rgba(255,0,0,.5)
+        */
 
         /* hsl(0~359, 0~100%, 0~100%) */
+        /* 
+            hsl(Hue, Saturation, Lightness)
+            hsl(각도, 백분율%, 백분율%)
+            hsl(0, 100%, 50%)
+        */
         
         /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+        /* 
+            hsla(색상, 채도, 명도, 투명도)
+            alpha(투명도): 
+            hsla(0, 100%, 50%, 0.5)
+        */
+
+        .colorName {color:red;}
+        .colorHex {color:#ff0000;}
+        .colorRgb {color:rgb(255, 0, 0);}
+        .colorRgba {color:rgba(255, 0, 0, 0.55);}
+        .colorHsl {color:hsl(0, 100%, 50%);}
+        .colorHsla {color:hsla(0, 100%, 50%, 0.504);}
 
     </style>
 </head>

@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        .txtColor {color:red;}
-        .bgColor {background-color: lightblue;}
-        .borderColor {border: 1px solid green;}
+        /* 정렬, 들여쓰기: shift+alt+f */
+        /* 글자색 */
+        .txtColor {
+            color: red;
+        }
+
+        /* 배경색 */
+        /* 주석: ctrl+/ 또는 shift+alt+a */
+        .bgColor {
+            background-color: lightblue;
+            background: lightblue; /* 속기형 */
+        }
+
+        /* 
+            CSS 형식
+            선택자{
+                속성: 값1 값2 값3 ....;
+                속성: 값1, 값2, 값3, ....;
+            }
+        */
+
+        /* 테두리 */
+        .borderColor {
+            /* color:red; */
+            /* border-width: 1px; */
+            /* border-style: solid; */
+            /* border-color: green; */
+
+            border: 1px solid green; /* 속기형 */
+            /* border: [굵기] 종류 [색]; */
+        }
     </style>
 </head>
+
 <body>
     <h1>CSS 색상 속성</h1>
     <p class="txtColor">글자</p>
     <p class="bgColor">배경</p>
     <p class="borderColor">테두리</p>
 </body>
+
 </html>

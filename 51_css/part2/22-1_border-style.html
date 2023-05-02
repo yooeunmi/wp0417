@@ -10,37 +10,50 @@
             width: 200px;
             height: 150px;
             margin: 20px;
+            border: 10px solid red;
         }
 
-        /* 선 없음 */
+        /* 
+            border: [굵기] 종류 [색];
+            색은 지정하지 않으면 글자색
+            글자색을 지정하지 않으면 검정
+        */
 
+        /* 선 제거(없음) */
+        .b1 {
+            border-style: none;
+        }
 
-        /* 실선 */
+        /* 실선(solid) */
+        .b2 {           
+            border-style: solid;
+        }
 
+        /* 점선(dotted) */
+        .b3 {
+            border-style: dotted;
+        }
 
-        /* 점선 */
+        /* 대시선(dashed) */
+        .b4 {border-style: dashed;}
 
+        /* 숨김(hidden) */
+        .b5 {border-style: hidden;}
 
-        /* 대시선 */
+        /* 이중실선(double) */
+        .b6 {border-style: double;}
 
+        /* 홈이 파임(groove) */
+        .b7 {border-style: groove;}
 
-        /* 숨김 */
+        /* 산등성이(ridge) */
+        .b8 {border-style: ridge;}
 
+        /* 안쪽(inset) */
+        .b9 {border-style: inset;}
 
-        /* 이중실선 */
-
-
-        /* 홈이 파임 */
-
-
-        /* 산등성이 */
-
-
-        /* 안쪽 */
-
-
-        /* 바깥쪽 */
-
+        /* 바깥쪽(outset) */
+        .b10 {border-style: outset;}
         
 
     </style>

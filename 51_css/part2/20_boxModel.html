@@ -17,6 +17,7 @@
         */
 
         /* (1) .container 배경색은 red로, 가로 크기는 50%, 세로 크기는 1000px로 지정하시오. */
+        /* %는 부모 요소의 크기를 기준 */
         .container {
             background-color: red;
             width: 50%;
@@ -25,7 +26,21 @@
 
 
         /* (2) .container 자식 요소인 div의 배경색을 yellow로, 여백은 100px, 패딩은 20px, 테두리는 두께는 10px, 테두리 종류는 solid, 테두리 색은 black으로 지정하시오. */
+        /* 
+            형식
+            선택자 {속성:값;} 
+        */
+        .container > div {
+            background-color: yellow;
+            margin: 100px;
+            padding: 20px;
 
+            border-width: 10px;
+            border-style: solid;
+            border-color: black;
+
+            border: 10px solid black;
+        }
 
 
         /* 
@@ -35,18 +50,31 @@
         */
 
         /* (3) .div1의 가로 크기는 100%, 세로 크기는 auto로 지정하시오. */
-
+        /* width와 height의 기본값은 auto */
+        /* 블록레벨요소의  width는 100% */
+        /* 인라인요소의 width는 콘텐츠 크기 */
+        .div1 {
+            width: 100%;
+            height: auto;
+        }
 
 
         /* %는 부모 크기 기준 */
         /* 위/아래 margin은 큰 쪽으로 지정된다. 주의!! */
 
         /* (4) .div2의 가로 크기는 50%, 여백은 30px로 지정하시오. */
+        .container > .div2 {
+            width: 50%;
+            margin: 30px;
+        }
 
 
         
         /* (5) .div3의 가로 크기는 250px, 세로 크기는 250px로 지정하시오. */
-
+        .div3 {
+            width: 250px;
+            height: 250px;
+        }
         
 
 

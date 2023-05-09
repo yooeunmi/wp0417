@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        /* display 속성이 inline, inline-block 요소에 적용된다. */
-        p {text-decoration: underline overline; font-size: 3rem; line-height: 3em;}
+        /* 
+            vertical-align 속성은 display 속성이 inline, inline-block, table-cell 요소에 적용된다. 
+
+            display: block; -> <div>, <h1>~<h6>, <p>
+
+            display: inline; -> <span>, <img>, <b>, <i>,...
+            display: inline-block; -> <button>, <input>
+            display: table-cell; -> <td>, <th>
+        */
+        p {
+            text-decoration: underline overline; 
+            font-size: 3rem; /* 기본 16폰트에 세배 : 48px */
+            line-height: 3em; /* 글자 크기의 세배 : 144px */
+        }
 
         /* 
+            vertical-align: 값;
+                값: px, %, baseline(기본값), top, middle, bottom, ...
+            
             baseline: 부모 요소의 기준선(baseline)에 맞춤(기본값)
             text-top: 요소의 맨 위를 부모 텍스트의 맨 위에 맞춤
             top: 요소의 맨 위를 줄에서 가장 큰 요소의 맨 위에 맞춤
@@ -24,6 +39,14 @@
         /* % 단위는 부모 요소의 줄 간격 기준, 음수 가능 */
         /* em 단위는 부모 요소의 글꼴 크기, 음수 가능 */
 
+        .vat img {vertical-align: top;}
+        .vam img {vertical-align: middle;}
+        .vab img {vertical-align: bottom;}
+
+        .vapx img {vertical-align: 144px;}
+        .vaem img {vertical-align: 3em;}
+        .vap img {vertical-align: 100%;}
+
     </style>
 </head>
 <body>
@@ -34,6 +57,6 @@
 
     <p class="vapx">vertical-<sub>align</sub>: px; <img src="/51_css/assets/star2.png" alt="스타2"></p>
     <p class="vaem">vertical-<sub>align</sub>: em; <img src="/51_css/assets/star2.png" alt="스타2"></p>
-    <p class="vaper">vertical-<sub>align</sub>: %; <img src="/51_css/assets/star2.png" alt="스타2"></p>
+    <p class="vap">vertical-<sub>align</sub>: %; <img src="/51_css/assets/star2.png" alt="스타2"></p>
 </body>
 </html>

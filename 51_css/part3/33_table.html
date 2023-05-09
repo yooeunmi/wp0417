@@ -9,11 +9,18 @@
     <style>
 
         /* 
+            아래 속성은 테이블에만 적용할 수 있다.
+
             border-collapse: 단일 테두리 축소 여부;
+                값: seperate(기본값), collapse(붕괴, 단일 테두리)
             border-spacing: 테두리 사이 여백;
+                값: 가로 [세로]
             caption-side: 캡션 위치(위 또는 아래);
+                값: top(기본값), bottom
             empty-cells: 빈 셀 테두리 숨김 여부;
+                값: show(기본값), hide
             table-layout: 셀 너비 고정 여부;
+                값:  auto(기본값 - 데이터 양에 따라 많으면 넓어진다.), fixed(균등 분배)
         */
 
         table,
@@ -33,14 +40,26 @@
         }
 
         /* .t2 테이블의 테두리를 단일 테두리로 축소하고 캡션의 위치를 아래로, 셀의 너비는 고정으로 지정하시오. */
+        .t2 {
+            border-collapse: collapse;
+            caption-side: bottom;
+            table-layout: fixed;
+        }
 
 
         /* .t3 테이블의 인접한 셀의 테두리 사이 공간은 0으로 지정하시오. */
         /* border-spacing 속성은 border-collapse:separate; 일때 적용된다. */
-
+        .t3 {
+            border-spacing: 0;
+            /* border-collapse: separate; */
+        }
 
         /* .t4 테이블의 border-spacing 속성을 가로 4px, 세로 8px로 지정하고, 빈 셀의 테두리는 숨기시오. */
         /* border-spacing: 가로 세로 */
+        .t4 {
+            border-spacing: 4px 8px;
+            empty-cells: hide;
+        }
 
 
         

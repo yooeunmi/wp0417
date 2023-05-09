@@ -6,14 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            텍스트 관련 속성
 
+            color: 색
+
+            font-family: 글꼴
+            font-size: 크기
+            font-weight: 굵기
+            font-style: 기울임
+            font: 굵기 기울임 크기/줄간격 글꼴;
+
+            line-height: 줄간격
+            text-align: 텍스트 가로 정렬
+                값: left, right, center, justify
+            vertical-aling: 수직 정렬
+            text-decoration: 꾸밈
+                        
+            letter-spacing: 자간
+            word-spacing: 어간
+            text-indent: 문단의 첫 줄 들여쓰기
+            text-transform: 대소문자 변환
+            text-shadow: 텍스트 그림자
+            */
+
+            .tal {text-align: left;}
+            .tar {text-align: right;}
+            .tac {text-align: center;}
+            .taj {
+                text-align: justify;
+                /* text-aling: justify; 영문의 경우 단어 단위로 줄바뀜되는 것을 글자 단위로 줄바꿈되게 한다. */
+                word-break: break-all;
+            }
     </style>
 </head>
 <body>
     <h1>텍스트 수평 정렬</h1>
-    <p class="tal">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
+    <p class="tal">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur voluptates ipsa expedita magni fugiat harum debitis non quasi ipsam totam, iure eos inventore adipisci suscipit commodi alias accusantium aperiam similique minus! Voluptas atque suscipit omnis impedit placeat ea sit tempore quos numquam iure aut quam ut, quae alias iusto perspiciatis voluptates. Vel quaerat esse quae, qui doloribus amet, consequuntur, obcaecati voluptas in delectus voluptatum cum! Sequi, explicabo ullam rem dolorem quo reprehenderit officia. Quo, nesciunt placeat perferendis sequi, quasi quos aspernatur at debitis deleniti veniam, officia aperiam nobis nihil sapiente exercitationem sint mollitia laboriosam necessitatibus nostrum harum architecto. Numquam!
+    </p>
     <p class="tar">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
     <p class="tac">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
-    <p class="taj">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다.</p>
+    <p class="taj">text-align은 텍스트의 수평(가로) 정렬 속성으로 block 요소 안에 있는 inline 요소(텍스트, 이미지 등)만을 정렬 한다. 즉, block 요소에만 적용할 수 있다. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consequuntur voluptates ipsa expedita magni fugiat harum debitis non quasi ipsam totam, iure eos inventore adipisci suscipit commodi alias accusantium aperiam similique minus! Voluptas atque suscipit omnis impedit placeat ea sit tempore quos numquam iure aut quam ut, quae alias iusto perspiciatis voluptates. Vel quaerat esse quae, qui doloribus amet, consequuntur, obcaecati voluptas in delectus voluptatum cum! Sequi, explicabo ullam rem dolorem quo reprehenderit officia. Quo, nesciunt placeat perferendis sequi, quasi quos aspernatur at debitis deleniti veniam, officia aperiam nobis nihil sapiente exercitationem sint mollitia laboriosam necessitatibus nostrum harum architecto. Numquam!</p><!-- lorem100 + tab: 임의글 -->
 </body>
 </html>

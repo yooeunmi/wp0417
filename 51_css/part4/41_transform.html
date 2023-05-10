@@ -25,17 +25,45 @@
         }
 
         /* 
+            이동
+            transform: translateX(x);
+            transform: translateY(y);
+            transform: translateZ(z);
+            transform: translate3d(x, y, z);
             transform: translate(x, y);
-            transform: scale(w, h);
+            크기조절
+            transform: scaleX(x);
+            transform: scaleY(y);
+            transform: scaleZ(z);
+            transform: scale3d(x, y, z);
+            transform: scale(x, y);
+
+            회전
+            transform: rotateX(각도); (단위: deg)
+            transform: rotateY(각도); (단위: deg)
+            transform: rotateZ(각도); (단위: deg)
+            transform: rotate3d(x, y, z, 각도); (단위: deg)
             transform: rotate(각도); (단위: deg)
-            transform: skew(각도, 각도) (단위: deg);
+            
+            기울기
+            transform: skewX(각도) (단위: deg);
+            transform: skewY(각도) (단위: deg);
+            transform: skew(x각도, y각도) (단위: deg);
         */
 
         /* .outer에 마우스를 올렸을 때 .trftr의 위치를 가로로 100px 이동되게 하시오. */
-
+        .outer:hover .trftr {
+            /* transform: translate(100px, 0); */
+            transform: translateX(100px);
+        }
 
         /* .outer에 마우스를 올렸을 때 .trfsc의 크기를 너비/높이 모두 1.2로 지정하시오. */
-
+        /* 기본값 : 1(100%) */
+        /* transform: scale(1, 1); */
+        .outer:hover .trfsc {
+            transform: scale(1.2, 1.2);
+            transform: scale(1.2); /* 하나만 써도 값음, 비례적으로 커짐 */
+        }
 
         .trfro {
             /* 변환의 기준 */

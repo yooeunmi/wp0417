@@ -14,23 +14,39 @@
             margin: 20px;
         }
 
-        /* 
+        /*      
+            background: linear-gradient();
+            background: radial-gradient();
+
+            그라데이션은 하나의 색체에서 다른 색채로 변하는 단계, 혹은 그러한 기법    
+
             선형(linear) 그라디언트
-            1) linear-gradient([to 방향1], 색1, 색2, [색3, ...]) 
-                - 방향: left, right, top, bottom
+            1) linear-gradient([to x방향 y방향], 색1, 색2, [색3, ...]) 
+                - x방향: left, right, 
+                - y방향: top, bottom
             
             2) linear-gradient([각도], 색1, 색2, [색3, ...])
                 - 각도: 0~360deg 
+                - 단위: deg(디그리)
         */
 
         /* .lg1에 위 blue, 아래 white의 선형 그라디언트를 지정해 보세요. */
-        
+        .lg1 {
+            background: linear-gradient(to bottom, blue, red, white);
+            background: linear-gradient(to bottom, blue 40%, white 70%);
+        }
         
         /* .lg2에 왼쪽 아래 #ff0000, 오른쪽 위 #ffffff의 선형 그라디언트를 지정해 보세요. */
-
+        .lg2 {
+            /* background: linear-gradient(to right top, #ff0000, #ffffff); */
+            background: linear-gradient(45deg, #ff0000, #ffffff);
+        }
 
         /* .lg3에 왼쪽 위 blue, 가운데 white, 오른쪽 아래는 yellow의 선형 그라디언트를 지정해 보세요. */
-
+        .lg3 {
+            /* background: linear-gradient(to right bottom, blue, white, yellow); */
+            background: linear-gradient(135deg, blue, white, yellow);
+        }
 
         /* 
             원형(radial) 그라디언트
@@ -38,6 +54,9 @@
                 - 모양: circle
         */
         /* .rg에 중심은 white, 바깥쪽은 blue인 원형 모양의 그라디언트를 지정해 보세요. */
+        .rg {
+            background: radial-gradient(circle, white 20%, blue 80%);
+        }
 
         
     </style>

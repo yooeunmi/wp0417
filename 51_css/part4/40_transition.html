@@ -13,13 +13,23 @@
             transition-timing-function: 전환 시간 함수;
             transition-delay: 전환 지연 시간(단위: s(초));
 
+            (속기형)
             transition: [property] duration [timing-function] [delay];
+            transition: [속성] 전환시간 [가속도] [지연시간];
         */
 
 
         /* div에 전환 속성을 all, 전환 시간은 0.3초, 가속도는 ease, 지연 시간은 0초로 지정하시오. */
+        /* 단위 s: second(초) */
         
         div {
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+
+            transition: 2s 2s;/* duration delay */
+            transition: all .3s ease 0s;/* 초에 0 생략가능, 전환시간 외 생략 가능 */
             width:100px;
             height:100px;
             background: red;

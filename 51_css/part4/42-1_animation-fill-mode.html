@@ -9,10 +9,9 @@
         div {
             position: relative;
             width:100px;
-            height:100px;
-            background: yellow;
+            height:100px;            
             margin:20px;
-            left:0px; top:0px;
+            top:0px;
         }
 
         .anim {
@@ -22,6 +21,8 @@
             background: red;
             left:0px;
         }
+
+        /* 반복 횟수를 infinite로 지정하면 forwards는 동작하지 않는다. */
         @keyframes move {
             0% {left:100px; background: blue;}
             100% {left:300px; background: green;}

@@ -8,23 +8,21 @@
     <title>RWD</title>
     <style>
         /* 
-
-            /at/엣
+            /엣/
             @charset "uft-8";
             @import
             @keyframes
             @font-face
-            
 
             미디어쿼리 작성 형식:
-            @meida [not|only] [mediatype(미디어종류)] [and|,] (expressions(조건)) {
+            @meida (조건) {
                 CSS-code;
             }
 
-            mediatype(미디어종류): all, screen, tv, projection, print, ...
+            미디어종류: all, screen, tv, projection, print, ...
             and: 그리고
             , : 또는
-            expressions: 조건으로 min-width, max-width, orientation(방향), ...
+            조건: min-width, max-width, orientation, ...
         */
 
         /* 데스크탑의 배경색은 blue, 테블릿의 배경색은 green, 폰의 배경색은 red이 되도록 반응형 웹을 만들어 보세요. 미디어쿼리의 중단점(breakpoint)은 768, 1200으로 지정합니다. */
@@ -38,7 +36,6 @@
             margin: 20px;
         }
 
-
         /* tablet: 768이상 */
         @media screen and (min-width:768px) {
             body {background: green;}
@@ -46,15 +43,16 @@
                 display: flex;
                 flex-wrap: wrap;
             }
-            .div1 {flex: 45%;}
-            .div2 {flex: 45%;}
-
+            .div1 {flex:45%;}
+            .div2 {flex:45%;}
         }
 
         /* desktop: 1200이상 */
         @media screen and (min-width:1200px) {
             body {background: blue;}
-            .wrap div {flex: 30%;}
+            .wrap div {
+                flex: 30%;
+            }
         }
 
     </style>

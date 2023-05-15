@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>    
+    <!-- 
+        JAVA - 제임스 아서 고슬링, 1991년, 썬 -> 오라클
+        JavaScript - 브랜든 아이크, 1995년, 모질라
+        서로 다른 언어이다.
+
+        https://www.w3schools.com/js/js_history.asp
+    
+        HTML5.x : 내용
+        CSS3.x : 디자인
+        JS(ECMAScript6(ES6), 에크마) : 동적 표현
+            1. HTML 콘텐츠와 속성 변경
+            2. CSS 속성 변경
+            3. 라이브러리 활용 
+                - 제이쿼리(jQuery)
+
+            4. 웹 애플리케이션 개발
+                - React, Vue.js, Angular.js
+            5. 서버
+                - Node.js
+            
+        코드 입력시 주의 사항
+            1. 자바스크립트는 대소문자를 구분한다.
+            2. 문장 끝에 세미콜론(;)을 쓴다.
+            3. 문자열 데이터는 큰따옴표("") 또는 작은 따옴표('')로 묶는다.
+
+        자바스크립트는 
+            - head 사이 또는 body 사이에 쓸 수 있다.
+     -->
+    <!-- 외부 스크립트 -->
+    <script src="script.js"></script>
+
+    <!-- 내부 스크립트 -->
+    <script>
+        // document -> 객체
+        // write -> 메서드
+        // 'hello' -> 문자열 데이터 -> 값
+        // 17 -> 숫자 데이터 -> 값
+        document.write('나는 head에 썼다.');
+
+        /* document.addEventListener('DOMContentLoaded', function(){
+        var h1Tag = document.querySelector('h1');
+        h1Tag.style.color = 'orange';
+        }); */
+    </script>
+</head>
+
+<body>
+    <h1>어디에?</h1>
+    <!-- 외부 스크립트 -->
+    <script src="script.js"></script>
+    
+    <!-- 내부 스크립트 -->
+    <script>
+        document.write('나는 body에 썼다.');
+        
+        var h1Tag = document.querySelector('h1');
+        h1Tag.style.color = 'orange';
+    </script>
+    
+</body>
+
+</html>

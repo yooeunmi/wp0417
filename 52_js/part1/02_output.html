@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+JS</title>        
+</head>
+
+<body>
+    <h1>출력</h1>
+    <script>
+        /* 
+            현실세계
+            사람, 동물
+            걷는다, 뛴다, 잔다, 웃는다, ...
+            이름, 성별, 색깔, 크기, 무게
+            
+
+            자바스크립트
+            객체 ~ 움직이는 주체(주어)
+            메서드 ~ 동작(동사, 서술어)
+                - window 메서드 : alert(), confirm(), prompt()
+                    window 객체는 객체 이름을 생략할 수 있다.(일반적으로 쓰지 않는다.)
+                - document 메서드 : write(), querySelector()
+                - console 메서드 : log()
+            속성 ~ 특징
+            이벤트 ~ 사건
+
+            객체기반 프로그래밍 언어
+
+            객체: window, document, console ...
+            메서드(매개변수1, 매개변수2 ...): alert(), confirm() prompt(), write(), log()
+            메서드마다 매개변수가 정해져 있다.
+
+            alert('메시지'): 알림 창을 띄운다.
+            confirm('메시지'): 확인/취소 창을 띄운다.
+            prompt('텍스트', ['기본텍스트']): 프롬프트 입력 창을 띄운다.-> []는 생략가능
+            document.write(표현식1, exp2, ..., expN): 웹 브라우저 화면 출력한다.
+            console.log('메시지'): 콘솔 창에 출력한다.
+
+            문장 형식:
+            객체.메서드();
+        */
+
+        // 경고창 -> 확인
+        alert('alert 출력');
+        
+        // 확인/취소창 -> 확인, 취소
+        confirm('confirm 출력');
+        
+        // 문서에 쓰기
+        document.write('document.write 출력');
+        
+        // 콘솔
+        console.log('console.log 출력');
+
+        // 입력
+        prompt('이름을 쓰세요.', '홍길동');
+
+        // 한 줄 주석 -> ctrl+/
+        /* 
+            여러 줄 주석 -> shift+alt+a
+        */        
+    </script>
+    
+</body>
+
+</html>

@@ -13,44 +13,84 @@
     <script>
         /* 
             데이터 유형
-            1. string: '문자열' 또는 "문자열"
-            2. number: 숫자
+            1. string(문자열): '문자열' 또는 "문자열"
+            2. number(숫자): 숫자
             3. boolean(부울): true 또는 false
-            4. undefined
+            4. undefined(정의되지 않은)
             5. object(객체): Array(배열), Date(날짜), Math(수학), String(문자열), null, ... 
 
-            undefined는 변수에 값이 등록되기 전의 기본값이고,
-            null은 변수에 저장된 데이터를 비우고자할 때 사용된다.
-            Boolean() 함수는 숫자 0과 null, undefined, 빈 문자('')를 제외한 모든 데이터에 대해 true를 반환한다.
+            객체 - 메서드(), 속성
+            객체.메서드();
+            document.write(); ->document객체의 write() 메서드
+            alert(); -> window 객체의 alert() 메서드, alert() 함수
+
+            객체.속성;
+
+            함수? 객체가 없는 메서드
+                - 내장 함수: Boolean(), Number(), String()
+                - 사용자 함수 정의
+
+            undefined 
+                - 변수에 값이 등록되기 전의 기본값
+                - 변수를 선언 후 값을 할당하지 않았을 때
+            null 
+                - 변수에 저장된 데이터 삭제
+
+            Boolean() 함수는 false, 숫자 0과 null, undefined, 빈 문자('')를 제외한 모든 데이터에 대해 true를 반환(return)한다.
         */
 
         // string
-
+        let s1 = '자바스크립트';
+        let s2 = '100';
+        let s3 = '<h3>제목</h3>';
+        // 숫자 100을 문자열 100으로 변환
+        let s4 = String(100);
 
         // number
-
+        let n1 = 100;
+        let n2 = -3.14;
+        // 문자열 '100'을 숫자 100으로 변환
+        let n3 = Number('100');
+        // NaN(Not a Number, 숫자가 아니다.)
+        let n4 = Number('백');
 
         // boolean
-
+        let b1 = true;
+        let b2 = false;
+        let b3 = Boolean(0);
+        let b4 = Boolean(null);
+        let b5 = Boolean(undefined);
+        let b6 = Boolean('');
+        let b7 = Boolean(false);
 
         // undefined
+        let und;
 
-
-        // null
-
+        // object
+        let obj = 100;
+        obj = null;
 
         // 출력
-        document.write(s1, '<br>');
+        // 객체.메서드(매개변수1, 매개변수2, ...)
+        // document.write(표현식1, exp2, exp3, ...)
+        // document.write(변수, 'HTML문자열')
+        document.write(s1, '<br>', 1+1, '<br>');
         document.write(s2, '<br>');
         document.write(s3, '<br>');
+        document.write(s4, '<br><br>');
         document.write(n1, '<br>');
         document.write(n2, '<br>');
+        document.write(n3, '<br>');
+        document.write(n4, '<br>');
         document.write(b1, '<br>');
         document.write(b2, '<br>');
         document.write(b3, '<br>');
         document.write(b4, '<br>');
-        document.write(u, '<br>');
-        document.write(n, '<br>');
+        document.write(b5, '<br>');
+        document.write(b6, '<br>');
+        document.write(b7, '<br>');
+        document.write(und, '<br>');
+        document.write(obj, '<br>');
     </script>
 </body>
 

@@ -12,13 +12,43 @@
     <h1>연산자</h1>
     <script>
         /* 
-            산술 연산자: +(더하기), -(빼기), *(곱하기), /(나누기), %(나머지), **(거듭제곱)
+            산술 연산자: 
+                +(더하기), 
+                -(빼기), 
+                *(곱하기), 
+                /(나누기), 
+                %(나머지), 
+                **(거듭제곱)
+
+            10 + 3 = 13
+            10 - 3 = 7
+            10 * 3 = 30
+            10 / 3 = 3.3333333333333335
+            10 % 3 = 1
+            10 ** 3 = 1000 -> 10 * 10 * 10
         */
 
-        var num1 = 15;
-        var num2 = 2;
+        // A = a -> a를 A에 대입(할당)한다(할당 연산자)
+        var num1;
+        num1 = 10;
+        var num2 = 3;
         var result;
 
+        // 변수 = 값;
+        // 변수 = 변수;
+        // 변수 = 변수 + 변수;
+        // 값 = 변수; (x)
+        result = num1 + num2;
+        document.write(result, '<br>');
+        result = num1 - num2;
+        document.write(result, '<br>');
+        result = num1 * num2;
+        document.write(result, '<br>');
+        result = num1 / num2;
+        document.write(result, '<br>');
+        result = num1 % num2;
+        document.write(result, '<br>');
+        result = num1 ** num2;
         document.write(result, '<br>');
         
     </script>

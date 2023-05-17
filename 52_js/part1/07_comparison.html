@@ -12,18 +12,43 @@
     <h1>연산자</h1>
     <script>
         /* 
-            비교 연산자: >(초과), <(미만), >=(이상), <=(이하), 
-                        ==(같다), !=(다르다), ===(데이터와 데이터 유형이 모두 같다), 
-                        !==(데이터 또는 데이터 유형이 다르다)
+            비교 연산자: 
+                >(초과), <(미만), >=(이상), <=(이하), 
+
+                ==(같다, 데이터유형 구분x), 
+                !=(다르다, 데이터유형 구분x), 
+                
+                ===(같다, 데이터유형 구분), 
+                !==(다르다, 데이터유형 구분)
+            
+            비교 연산의 결과는 true(참) 또는 false(거짓)이다.
         */
 
         var a = 10;
         var b = 20;
-        var c = 10;
-        var f = '20';
+        var str = '20';
         var result;
 
+        result = a > b;
         document.write(result, '<br>');
+        result = a < b;
+        document.write(result, '<br>');
+        result = a >= b;
+        document.write(result, '<br>');
+        result = a <= b;
+        document.write(result, '<br><br>');
+
+        // str = '20'
+        // b = 20;
+        result = str == b;
+        document.write(result, '<br>');
+        result = str != b;
+        document.write(result, '<br>');
+        result = str === b;
+        document.write(result, '<br>');
+        result = str !== b;
+        document.write(result, '<br>');        
+
 
         
     </script>

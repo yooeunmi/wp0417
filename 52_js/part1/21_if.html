@@ -12,20 +12,39 @@
     <h1>if</h1>
     <script>
         /* 
+            HTML: 내용(콘텐츠)
+            CSS: 디자인
+            자바스크립트: 동적, 인터렉티브(상호작용)
+            1. 어디에?
+            2. 출력: console, alert, document.write()
+            3. 변수(저장공간): var, let, const
+            4. 데이터: 문자열, 숫자, 부울, undefined, null(객체)...
+            5. 연산자: 산술, 비교, 논리, 대입
+            6. 제어문: 조건(선택), 반복
+            7. 함수
+            8. 객체
+            9. 이벤트 + 제이쿼리
+
             if (조건식) {
                 코드;
             }
         */
 
         var num = 10;
+        if (num < 500) {
+            document.write('hello1', '<br>');
+        }
 
-
-        // 조건식에 0, null, ''(빈 문자), undefined를 사용하면 false, 그 밖의 값은 true
+        // 조건식에 false, 0, null, ''(빈 문자), undefined를 사용하면 false, 그 밖의 값은 true
         var num2 = 3;
-
+        if (num2) {
+            document.write('hello2', '<br>');
+        }
 
         var num3 = 0;
-
+        if (num3) {
+            document.write('hello3', '<br>');
+        }
         
     </script>
 </body>

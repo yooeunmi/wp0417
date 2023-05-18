@@ -12,7 +12,19 @@
     <h1>switch</h1>
     <script>
         /* 
+            if (변수 == 값1) {
+                코드1;
+            } else if (변수 == 값2) {
+                코드2;
+            } else if (변수 == 값3) {
+                코드3;
+            } else {
+                코드4;
+            } 
+
             var 변수 = 초깃값;
+
+            break -> switch, 반복문을 탈출(종료)할 때 사용한다.
 
             switch (변수) {
                 case 값1: 코드1;
@@ -42,7 +54,21 @@
 
         // window.location.href = 'url'
         // 현재 위치에서 url에 저장된 주소로 이동된다.
-        if (url) location.href = 'https://' + url;
+        // if (url) location.href = 'https://' + url;
+
+        // 객체: window, document, location(창의위치객체)
+        // 메서드: reload() ~ 괄호가 있다.
+        // 속성: href ~ 괄호가 없다.
+        // 객체는 메서드와 속성을 갖고 있다.
+        // 객체.메서드() -> location.reload()
+        // 객체.속성 -> location.href
+        // 속성과 메서드는 객체없이 사용할 수 없다.
+
+        // 조건식에 NaN, false, 0, null, ''(빈 문자), undefined를 사용하면 false, 그 밖의 값은 true
+        // 보기중에 없는 사이트일 경우 url은 undefined 라서 false라 빠져 나옴.
+        if (url){ 
+        location.href = 'https://' + url;
+        }
     </script>
 </body>
 

@@ -12,6 +12,8 @@
     <h1>자리 배치도</h1>
     <script>
         /* 
+            // 조건식이 true이면 코드1 실행
+            // 조건식이 false이면 코드2 실행
             if (조건식) {
                 코드1;
             } else {
@@ -19,14 +21,49 @@
             }
         */
 
-        // 입력
+        /* 
+            학생수와 한 줄에 앉을 수 있는 자리수를 입력받아 필요한 총 라인수
 
+            예) 전체 학생수: 17명
+                한 줄에 앉을 수 있는 자리: 4자리
+                20명이 전부 앉으려면 필요한 총 라인수? 5줄
+
+                16명 / 4자리 = 4줄
+                17명 / 4자리 = 4줄 + 1줄
+        */
+        
+        // 문 > 학생수와 한 줄에 앉을 수 있는 자리수를 입력받아 필요한 총 라인수
+        // 입력
+        var stu_count = prompt('전체 학생수를 입력하세요.');
+        var sit_count = prompt('한 줄에 앉을 수 있는 자리의 수를 입력하세요');
+        var total_line;           
 
         // 처리
-
+        // Number('숫자형 문자열')
+        // Number('10') -> 10
+        // Number('십') -> NaN(Not a Number, 숫자가 아니다.)
+        // parseInt(숫자) 함수 -> 숫자를 정수화
+        // parseInt(3) -> 5
+        // parseInt(5.25) -> 5 
+        if (stu_count % sit_count === 0) {
+            total_line = stu_count / sit_count;
+        } else {
+            total_line = parseInt(stu_count / sit_count) + 1;
+        }
 
         // 출력
-
+        // 전체 학생수는 20명이고, 한 줄에 앉을 수 있는 자리의 수는 4좌석이므로 필요한 총 라인 수는 5줄이다.
+        // 바뀌는 정보는 변수 처리한다.
+        // 변수를 '' 또는 ""로 묶으면 문자열이 된다.
+        // '문자열'과 변수를 구분한 후 + 연산자로 구분한다.
+        // 1 + 2 -> 3
+        // 일 + 2 -> 일2
+        /* 
+        total_line = 10;
+        total_line + '일' -> 10일
+        total_line + 1 -> 11 
+        */
+        document.write('전체 학생수는 ' + stu_count + '명이고, 한 줄에 앉을 수 있는 자리의 수는 ' + sit_count + '좌석이므로 필요한 총 라인 수는 ' + total_line + '줄이다.');
 
     </script>
 </body>

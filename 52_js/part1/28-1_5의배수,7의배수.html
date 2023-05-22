@@ -22,8 +22,23 @@
             }
         */
 
-        // 1부터 100까지 5의 배수일 경우 빨간색 글자, 7의 배수일 경우 초록색 글자, 5의 배수이면서 7의 배수일 경우 아쿠아색 글자로 출력
-
+        // 1부터 100까지 5의 배수일 경우 빨간색 글자, 7의 배수일 경우 파랑 글자, 5의 배수이면서 7의 배수일 경우 아쿠아색 글자로 출력
+        // i % 5 == 0 -> 5의 배수
+        // i % 7 == 0 -> 7의 배수
+        // i % 5 == 0 && i % 7 == 0 -> 5의 배수 이면서 7의 배수
+            
+        
+        for (let i = 1; i <= 100; i++) {            
+            if (i % 5 == 0 && i % 7 == 0) {
+                document.write('<div class ="aqua">' + i + '</div>');
+            } else if (i % 5 == 0) {
+                document.write('<div class ="red">' + i + '</div>');
+            } else if (i % 7 == 0) {
+                document.write('<div class ="blue">' + i + '</div>');
+            } else {
+                document.write('<div>' + i + '</div>');
+            }
+        }
 
 
     </script>

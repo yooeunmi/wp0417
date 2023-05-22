@@ -20,8 +20,16 @@
             continue: 반복문에서 contiune 이후 코드를 무시하고, while문에서는 조건식으로, for문에서는 증감식으로 이동하여 반복문을 계속 실행한다.
         */
 
+        var a = 0;
+        while (a <= 9) {
+            a++;
+            if (a % 2 == 0) continue;
+            document.write(a, '<br>');            
+        }
+
+        // i++ 를 -> i = i + 2 증감식을 다르게 쓸 수 있다.
         for (var i = 1; i <= 10; i++) {
-            if (i % 2 == 0) continue;
+            if (i % 2 != 0) continue;
             document.write(i, '<br>');
         }
         document.write('==== The End ====');

@@ -35,14 +35,30 @@
         document.write("<table>");
         for (let i = 0; i < rowNum; i++) {
             document.write("<tr>");
-            for (let j = 0; j <= colNum; j++) {
+            for (let j = 1; j <= colNum; j++) {
                 seatNo = i * colNum + j;
                 if (seatNo > stuNum) break;
-                document.write("<td> 좌석 " + seatNo + " </td>");
+                document.write("<td>좌석 " + seatNo + "</td>");
             }
             document.write("</tr>");
         }
-        document.write("</table>")
+        document.write("</table>");
+
+        // <table>
+        // <tr>
+        // <td>좌석 1</td>
+        // <td>좌석 2</td>
+        // <td>좌석 3</td>
+        // <td>좌석 4</td>
+        // </tr>
+        // <tr>
+        // <td>좌석 5</td>
+        // <td>좌석 6</td>
+        // <td>좌석 7</td>
+        // <td>좌석 8</td>
+        // </tr>
+        // </table>
+
     </script>
 </body>
 

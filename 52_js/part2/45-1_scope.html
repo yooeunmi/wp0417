@@ -20,6 +20,27 @@
                 - 모든 영역에서 호출될 수 있는 함수
         */
 
+        // 전역 변수
+        let a = 1;
+
+        // 전역 함수
+        // 전역 함수와 지역 함수가 이름이 같더라도 전역함수 지역함수 순으로 호출한다.
+        // 지역변수와 지역 함수는 쓰이고 난 후 메모리에 남지 않는다.
+        function myFn1() {
+            // 지역 변수
+            let a = 2;
+            document.write('나는 전역함수이다.<br>');
+            // 지역 함수
+            function myFn2() {
+                document.write('나는 지역함수이다.<br>');
+            }
+            myFn2();
+        }
+
+        document.write(a, '<br>');
+        myFn1();
+        // myFn2(); (x)
+        
 
 
     </script>

@@ -24,7 +24,20 @@
                 함수명();
         */
 
-        // 1부터 10까지 출력
+        // 함수 사용하여 1부터 10까지 출력
+        /* for (let i = 1; i <= 10; i++) {
+            document.write(i, '<br>');
+        } */
+
+        let i = 1;
+        function ten(){
+            document.write(i, '<br>');
+            i++;
+            if (i >= 11) return;
+            ten();
+        }
+
+        ten();
 
 
     </script>

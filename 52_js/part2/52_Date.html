@@ -40,6 +40,45 @@
             setTime()
         */
 
+        let d = new Date();
+        document.write(d, '<br>');
+
+        let yy = d.getFullYear();      
+        // 0(1월) ~ 11(12월)  
+        let mo = d.getMonth() + 1;
+        let dd = d.getDate();
+        // 0(일) ~ 6(토)
+        let we = d.getDay();
+
+        let hh = d.getHours();
+        let mm = d.getMinutes();
+        let ss = d.getSeconds();
+
+        if (we === 0) {
+            we = '일요일';
+        } else if (we === 1) {
+            we = '월요일';
+        } else if (we === 2) {
+            we = '화요일';
+        } else if (we === 3) {
+            we = '수요일';
+        } else if (we === 4) {
+            we = '목요일';
+        } else if (we === 5) {
+            we = '금요일';
+        } else {
+            we = '토요일';
+        }
+
+        document.write(yy + '년 ' + mo + '월 ' + dd + '일(' + we + ') ' + hh + ':' + mm + ':' + dd, '<br>');
+
+        document.write(yy, '<br>');
+        document.write(mo, '<br>');
+        document.write(dd, '<br>');
+        document.write(hh, '<br>');
+        document.write(mm, '<br>');
+        document.write(ss, '<br>');
+
 
         
     </script>

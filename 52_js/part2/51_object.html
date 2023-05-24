@@ -29,7 +29,7 @@
             객체는 기능(메서드)과 속성을 가지고 있다.
 
             객체.메서드() -> 객체의 메서드를 실행한다.
-            prompt();
+            prompt(); -> window 객체이면서 함수이다.
             document.write();
             document.getElementById(); -> 아이디에 의해서 요소를 가져온다.
             객체.setAttribute(); -> 괄호안의 속성을 설정한다.
@@ -42,7 +42,7 @@
             객체의 종류
             1. 내장 객체(Built-in Object)
                 - 자바스크립트 엔진에 내장되어 있는 객체
-                - Date, Array, Math, String 등
+                - Object, Date, Array, Math, String 등
             2. 브라우저 객체 모델(BOM, Browser Object Model)
                 - 브라우저에 계층 구조로 내장되어 있는 객체
                 - window, document(DOM), screen, location, history, navigator 
@@ -50,9 +50,56 @@
                 - HTML 문서 구조
         */
 
-        // 내장 객체 생성
-        // 객체 생성 시 new 키워드와 생성함수를 사용한다.
-        // 참조변수(인스턴스명) = new 생성함수()
+        /* 
+            // 객체 생성1
+            let 객체 = new 생성함수();
+            객체.속성 = 값;
+            객체.속성 = function(){};
+
+            // 객체 생성2
+            let 객체 = {
+                속성: 값,
+                속성: function(){}
+
+            };
+
+            - 객체 생성 시 new 키워드와 생성함수를 사용한다.
+            - 참조변수(인스턴스명) = new 생성함수()
+            - 변수를 객체(참조)변수라 하며, 인스턴스(instance : 사본)라 부른다.
+            - 객체내에 함수를 값으로하는 속성을 메서드라 한다. 
+
+            객체.메서드() = fuction(){};
+            객체.속성 = 값;
+        */
+
+        // 객체 정의: tv 객체
+        // this는 객체 자기자신
+        let tv = new Object();
+        tv.color = 'white';
+        tv.price = 300000;
+        tv.info = function(){
+            document.write('tv 색상: ' + this.color, '<br>');
+            document.write('tv 가격: ' + this.price, '<br>');
+            // document.write('tv2 색상: ' + tv.color, '<br>');
+            // document.write('tv2 가격: ' + tv.price, '<br>');            
+        };
+
+        tv.info();
+
+
+
+        let tv2 = {
+            color: 'blue',
+            price: 500000,
+            info: function(){
+                // document.write('tv 색상: ' + this.color, '<br>');
+                // document.write('tv 가격: ' + this.price, '<br>');
+                document.write('tv2 색상: ' + tv2.color, '<br>');
+                document.write('tv2 가격: ' + tv2.price, '<br>');
+            }
+        };
+        
+        tv2.info();
 
 
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화 */
+        * {margin:0; padding:0;}
+        img {width: 100%; vertical-align: top;}
+        a {text-decoration: none; color: #333;}
+
+        /* 레이아웃와 배경색 */
+        .wrap {width: 1000px;}
+        header {height: 100px; background: #ccc;}
+        section {
+            position: relative;
+            height: 500px; overflow:hidden;
+        }
+        footer {height: 100px; background: #555;}
+
+        /* 로고 */
+        .logo {text-align: center; line-height: 100px;}
+
+        /* 메인 타이틀 */
+        h2 {
+            position: absolute; z-index: 9999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        /* 슬라이드 */
+        ul {position:absolute; top:0; left:0; height: 400%;
+            animation: slide 9s infinite;
+        }
+        li {
+            width: 1000px; height: 500px; overflow: hidden;
+        }
+
+        @keyframes slide {
+            0% {top:0;}
+            5% {top:-100%;}
+            33% {top:-100%;}
+            38% {top:-200%;}
+            66% {top:-200%;}
+            71% {top:-300%;}
+            99.99% {top:-300%;}
+            100% {top:0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="logo"><a href="#">이탈리아</a></h1>
+        </header>
+        <section>
+            <h2>메인 타이틀</h2>
+            <ul>
+                <li><img src="img/slide1.jpg" alt=""></li>
+                <li><img src="img/slide2.jpg" alt=""></li>
+                <li><img src="img/slide3.jpg" alt=""></li>
+                <li><img src="img/slide1.jpg" alt=""></li>
+            </ul>
+        </section>
+        <footer>Copyright 2023 이탈리아. All rights reserved.</footer>
+    </div>
+</body>
+</html>

@@ -1,43 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>패스트프로토타입_유은미</title>
     <style>
-        /* 초기화 */       
-        * {margin: 0 auto; padding: 0;}
-        img {width: 100%; vertical-align: top;}
-        a {text-decoration: none; color: #333;}        
+        /* 초기화 */
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
 
-         /* 레이아웃과 배경색 */
-        body { background: #fff; color: #333;}
-        .wrap {width: 100%;}
-        header {height: 100px; background:#ccc;}
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 글꼴 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+        /* 레이아웃과 배경색 */
+        body {
+            background: #fff;
+            color: #333;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        header {
+            height: 100px;
+            background: #ccc;
+        }
+
         section {
             position: relative;
-            height: 500px; 
+            height: 500px;
             overflow: hidden;
         }
-        footer {height: 100px; background: #999;}
+
+        footer {
+            height: 100px;
+            background: #999;
+        }
 
         /* 로고 */
-       .logo {text-align:center; line-height: 100px;}
+        .logo {
+            position: relative;
+            text-align: center;
+            line-height: 100px;
+        }
 
-       /* 메인 타이틀 */
-       h2 {
-        position: absolute; z-index: 9999;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 3rem;
-        color: #fff;
-        text-shadow: 1px 1px 5px #000;
-    }
+        .ani {
+            animation: move 1s linear 2s alternate;
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 200px;
+            }
+        }
+
+        /* 메인 타이틀 */
+        h2 {
+            position: absolute;
+            z-index: 9999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 1px 1px 5px #000;
+        }
 
         /* 푸터 */
-        .copy {text-align:center; line-height: 100px;}
+        .copy {
+            text-align: center;
+            line-height: 100px;
+        }
 
         /* 슬라이드 */
         ul {
@@ -47,6 +100,7 @@
             height: 400%;
             animation: slide 3s infinite;
         }
+
         li {
             width: 100%;
             height: 500px;
@@ -54,26 +108,50 @@
         }
 
         @keyframes slide {
-            0% {top:0;}
-            5% {top:-100%;}
-            33% {top:-100%;}
-            38% {top:-200%;}
-            66% {top:-200%;}
-            71% {top:-300%;}
-            99.99% {top:-300%;}
-            100% {top:0;}
+            0% {
+                top: 0;
+            }
+
+            5% {
+                top: -100%;
+            }
+
+            33% {
+                top: -100%;
+            }
+
+            38% {
+                top: -200%;
+            }
+
+            66% {
+                top: -200%;
+            }
+
+            71% {
+                top: -300%;
+            }
+
+            99.99% {
+                top: -300%;
+            }
+
+            100% {
+                top: 0;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="wrap">
         <!-- 헤더 -->
         <header>
-            <h1 class="logo"><a href="#">으뜸요리 </a></h1>
+            <h1 class="logo ani"><a href="#">으뜸요리 </a></h1>
         </header>
         <!-- 섹션 -->
         <section>
-            <h2>요리를 부탁해! 으뜸요리학원</h2>
+            <h2 class="ff">요리를 부탁해! 으뜸요리학원</h2>
             <ul>
                 <li><img src="images/slide1.jpg" alt=""></li>
                 <li><img src="images/slide2.jpg" alt=""></li>
@@ -82,7 +160,8 @@
             </ul>
         </section>
         <!-- 푸터 -->
-        <footer class="copy">Copyright 2023 이탈리아. All rights reserved.</footer>
-    </div>    
+        <footer class="copy">Copyright 2023 유은미. All rights reserved.</footer>
+    </div>
 </body>
+
 </html>

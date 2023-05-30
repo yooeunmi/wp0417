@@ -12,7 +12,7 @@
     <h1>수학 객체</h1>
     <script>
        /* 
-            Math.abs(숫자): 절대값 반환
+            Math.abs(숫자): 절대값 반환 ~ 음수를 양수화
             Math.max(숫자1, 숫자2, 숫자3, ...): 가장 큰 값 반환
             Math.min(숫자1, 숫자2, 숫자3, ...): 가장 작은 값 반환
             Math.pow(숫자, 제곱값): 거듭제곱값 반환
@@ -23,6 +23,26 @@
             Math.sqrt(숫자): 제곱근값 반환
             Math.PI: 원주율 상수 반환
        */
+
+       document.write(Math.abs(-3.14) + '<br>');
+       document.write(Math.max(-3.14, 10, 20, 30) + '<br>');
+       document.write(Math.min(-3.14, 10, 20, 30) + '<br>');
+
+       // 5 ** 2 -> 5 * 5
+       document.write(Math.pow(5, 2) + '<br>');
+
+       document.write(Math.random() + '<br>');
+
+       // 반올림, 올림, 버림
+       document.write(Math.round(3.14) + '<br>');
+       document.write(Math.ceil(3.14) + '<br>');
+       document.write(Math.floor(3.94) + '<br>');
+
+       // 제곱근(루트)
+       document.write(Math.sqrt(16) + '<br>');
+
+       // 상수
+       document.write(Math.PI + '<br>');
 
 
     </script>

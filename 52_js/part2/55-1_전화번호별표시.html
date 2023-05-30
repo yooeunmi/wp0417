@@ -19,6 +19,10 @@
 
         // 전화번호 뒤 4자리 '*'표시 하기
 
+        let phoneNum = prompt('당신의 폰 번호를 입력하세요', '');
+        phoneNum = phoneNum.substring(0,phoneNum.length - 4) + '****';
+        document.write(phoneNum);
+
 
     </script>
 </body>

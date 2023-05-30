@@ -13,7 +13,7 @@
     <h1>랜덤 이미지</h1>
     <span></span><button>버튼</button><br>
     <div>
-        <img src="../assets/pic_1.jpg" alt="랜덤 이미지">
+        <img src="../../assets/pic_1.jpg" alt="랜덤 이미지">
     </div>
 
     <script>
@@ -22,10 +22,11 @@
         const img = document.querySelector('img');
         
         btn.addEventListener('click', function(){
+            // 1 ~ 6 사이 정수
             let num = Math.floor(Math.random() * 6 + 1);
             // HTML 요소 속성을 변경
             // setAttribute('HTML속성명', '값')
-            img.setAttribute('src', '../assets/pic_' + num + '.jpg');
+            img.setAttribute('src', '../../assets/pic_' + num + '.jpg');
         });
     </script>
 </body>

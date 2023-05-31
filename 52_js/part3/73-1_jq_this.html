@@ -22,11 +22,38 @@
         <li>목록4</li>
     </ul>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $(this) ~ 이벤트를 발생시킨 주체
+            $(this) ~ 이벤트를 발생시킨 객체
         */
+        /* 
+             목록 중에 하나를 클릭하면
+             클릭한 것만 빨간색 글자로 바뀌게 해보자.
+        */
+        $('li').click(function () {
+            $(this).css({ color: 'red' });
+        });
 
+
+
+
+       /*  $('li:nth-of-type(1)').click(function () {
+            $('li:nth-of-type(1)').css({ color: 'red' });
+        });
+
+        $('li:nth-of-type(2)').click(function () {
+            $('li:nth-of-type(2)').css({ color: 'red' });
+        });
+
+        $('li:nth-of-type(3)').click(function () {
+            $('li:nth-of-type(3)').css({ color: 'red' });
+        });
+
+        $('li:nth-of-type(4)').click(function () {
+            $('li:nth-of-type(4)').css({ color: 'red' });
+        });
+ */
     </script>
 </body>
 

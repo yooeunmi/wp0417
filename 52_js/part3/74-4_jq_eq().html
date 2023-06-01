@@ -19,8 +19,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('선택자').eq(n) ~ n에 해당하는 요소 선택 (단, n=0, 1, 2,...)
+            // 선택자
+            $('선택자:eq(n)')
+
+            // eq() 메서드
+            $('선택자').eq(n) ~ n번째에 해당하는 요소 선택 
+            (단, n=0, 1, 2,...)
         */
+
+        /* 
+            목록3을 선택하여
+            글자색을 빨간색으로 지정하시오.
+        */
+            // n = 1, 2, 3, ... 
+            $('li:nth-child(2)').css({color: 'blue'});
+            // eq메서드, n = 0, 1, 2, ...
+            $('li').eq(2).css({color: 'red'});
+            // eq선택자
+            $('li:eq(2)').css({color: 'red'});
 
     </script>
 </body>

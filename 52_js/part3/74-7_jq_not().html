@@ -13,14 +13,37 @@
         <li>목록1</li>
         <li class="ab">목록2</li>
         <li>목록3</li>
-        <li>목록4</li>
+        <li><span class="ab">목록4</span></li>
     </ul>
+    <div>
+        <p>나는 문단이다.</p>
+        <p class="ab">나는 문단이다.</p>
+        <p>나는 문단이다.</p>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
             $('선택자a').not('선택자b') ~ b요소를 제외한 요소 선택
         */
+        /* 
+           클래스가 .ab인 li를 제외한 나머지 li를 선택하여
+            글자색으로 빨강으로 지정하시오.
+
+        */
+
+        // li 중에서 .ab가 아닌 요소
+        $('li').not('.ab').css({ background: 'yellow'});
+
+        // 클래스가 ab인
+        $('.ab').css({ color: 'red'}); 
+
+        // 클래스 ab인 li       
+        $('li.ab').css({ border: '1px solid red'});  
+
+        // li의 하위 요소 중 클래스가 ab인 것
+        $('li .ab').css({ color: 'blue'});        
+
 
     </script>
 </body>

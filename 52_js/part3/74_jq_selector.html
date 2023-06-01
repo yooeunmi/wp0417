@@ -17,7 +17,7 @@
 
 <body>
     <ul>
-        <li>목록1</li>
+        <li id="green">목록1</li>
         <li>목록2</li>
         <li class="red">목록3</li>
         <li>목록4</li>
@@ -25,7 +25,35 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
+        /* 
+            CSS 선택자 -> 제이쿼리 선택자
+            #id, .class, tag, ...
+            https://www.w3schools.com/jquery/jquery_ref_selectors.asp
+            https://www.w3schools.com/cssref/css_selectors.php
+        */
 
+        // 태그
+        $('li').css({color: 'blue'});
+        // 'background-color' -> backgroundColor
+        // background
+        $('body').css({background: 'yellow'});
+        // $('body').css({backgroundColor: 'yellow'});
+        // $('body').css({'background-color': 'yellow'});
+
+        // 클래스
+        $('.red').css({color: 'red'});
+
+        // 아이디
+        $('#green').css({color: 'green'});
+
+        // this는 자바스크립트의 예약어로 '' 또는 ""로 묶으면 안된다.
+        // this란? 이벤트가 발생한 객체
+        $(this).메서드();
+
+        // window와 document는 자바스크립트의 BOM(DOM) 객체이며 '' 또는 ""로 묶으면 안된다.
+        $(window).메서드();
+        $(document).메서드();
+        
     </script>
 </body>
 

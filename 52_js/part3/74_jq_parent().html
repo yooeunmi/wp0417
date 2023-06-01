@@ -15,8 +15,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('선택자').parent() ~ 부모 요소 선택
+            제이쿼리 메서드
+            1. 이벤트 메서드: click(), mouseenter(), mouseleave(), ...
+            2. 탐색 메서드 ~ 선택자의 연장선
+                - parent(['선택자']): 부모 
+                - children(['선택자']): 자식 
+                - siblings(['선택자']): 형제들 
+                - find('선택자'): 하위(자손+손자) 
+                - eq(n): n번째 형제, n = 0,1,2, ...
+                - prev(): 이전 형제
+                - next(): 다음 형제
+                - not('선택자'): 선택한 요소 제외
+
+            3. 효과 메서드
+            
+            HTML DOM 요소를 선택하는 방법
+            1. 선택자: #id, .class, 태그
+            2. 탐색 메서드
+
+            $('선택자').parent() ~ 모든 부모 요소 선택
+            $('선택자a').parent('선택자b') ~ 선택자 b에 해당하는 부모 요소 선택
         */
+       /* 
+            .txt1 클래스의 부모를 선택하여 1px 두께의 빨간색 실선 테두리를 지정하시오.
+       */
+            $('.txt1').parent().css({border: '1px solid red'});
 
         
 

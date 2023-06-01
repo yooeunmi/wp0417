@@ -14,13 +14,22 @@
         <li><span>테스트</span><em class="abc">형제</em></li>
         <li><span>테스트</span><em>형제</em></li>
     </ul>
+    <div>
+        <em class="abc">형제</em>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('선택자a').find('선택자b') ~ a의 하위 b요소 선택
+            $('부모').children('자식') ~ 자식 요소 선택
+            $('조상').find('하위') ~ 하위 요소 선택
         */
-
+       /* 
+            ul의 하위 요소인 abc를 선택하여
+            테두리를 '1px solid red'로 지정하시오.
+       */
+            $('ul').find('.abc').css({border: '1px solid red'});
+            // $('.abc').css({border: '1px solid red'});
     </script>
 </body>
 

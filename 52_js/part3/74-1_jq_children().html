@@ -10,8 +10,11 @@
 
 <body>
     <ul>
-        <li><span>목록1</span></li>
-        <li>목록2</li>
+        <li>
+            <span>목록1</span>
+            <b>목록2</b>
+        </li>
+        <li><b>목록2</b></li>
         <li>목록3</li>
         <li>목록4</li>
     </ul>
@@ -19,9 +22,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('선택자a').children('선택자b') ~ b자식 요소 선택
+            $('부모').children() ~ 모든 자식 요소 선택
+            $('부모').children('b자식') ~ b자식 요소 선택
         */
 
+        /* 
+            li의 자식 span을 선택하여
+            글자색을 빨강으로 지정하시오.
+        */
+            $('li').children('span').css({color: 'red'});
+            // $('li').children().css({color: 'red'});
+        
+            /* 
+            ul의 자식을 선택하여
+            테두리를 'lpx solid red'로 지정하시오.
+        */
+            $('ul').children().css({border: '1px solid red'});
     </script>
 </body>
 

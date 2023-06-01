@@ -10,7 +10,14 @@
 
 <body>
     <ul>
-        <li><span>테스트</span><em>형제</em></li>
+        <li>
+            <span>테스트</span>
+            <em>형제1</em>
+            <i>형제2</i>
+            <b>형제3</b>
+            <em>형제1</em>
+            <em>형제1</em>
+        </li>
         <li><span>테스트</span><em>형제</em></li>
         <li><span>테스트</span><em>형제</em></li>
     </ul>
@@ -18,8 +25,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('선택자').siblings() ~ 형제 요소 선택
+            $('선택자').siblings() ~ 모든 형제 요소 선택
+            $('선택자a').siblings('선택자b') ~ 선택자b와 같은 형제 요소 선택
         */
+
+        /* 
+            span의 형제중에서 em을 선택하여
+            글자색을 빨강으로 지정하시요.
+        */
+        $('span').siblings('em').css({ color: 'red' });
+
+
 
     </script>
 </body>

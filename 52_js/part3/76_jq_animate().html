@@ -10,7 +10,7 @@
         div {
             width: 300px;
             height: 300px;
-            background: blue;
+            background-color: blue;
             margin: 100px auto;
         }
     </style>
@@ -19,12 +19,34 @@
 <body>
     <div></div>
 
+    <!-- 제이쿼리 라이브러리 파일 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- 제이쿼리 UI 라이브러리 파일 : 배경 색상을 애니메이트 시킨다. -->
+    <!-- 제이쿼리 UI 라이브러리 파일 : 30가지가 넘는 다양한 가속도를 지정할 수 있다. -->    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <!-- https://jqueryui.com/ -->
+    <!-- https://cdnjs.com/libraries/jqueryui -->
+    <!-- https://jqueryui.com/easing/ -->
+    <!-- https://api.jqueryui.com/easings/ -->
     <script>
         /* 
-            $('선택자').animate({속성: 값}, 시간, '가속도') ~ 요소에 애니메이션 적용
+            요소에 애니메이션 적용
+
+            $('선택자').css({속성: 값})
+            $('선택자').animate({속성: 값}, 400, 'swing')
+            $('선택자').animate({속성: 값}, [시간], ['가속도'])
+            가속도: swing(가속), linear(등속)
         */
+        /* 
+            파란색 박스 위에 마우스를 올리면 
+            박스의 크기를 기존의 300px에서 가로/세로 500px로 애니메이트 되도록 지정하시오.
+        */
+        $('div').mouseenter(function(){
+            $(this).stop().animate({width: 500, height: 500, backgroundColor: 'red'}, 800, 'easeOutExpo');
+        });
+        $('div').mouseleave(function(){
+            $(this).stop().animate({width: 300, height: 300, backgroundColor: 'blue'}, 800, 'easeOutExpo');
+        });
 
     </script>
 </body>

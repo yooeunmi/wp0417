@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        li {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+
+        div {
+            width: 400px;
+            height: 400px;
+            margin: 50px;
+            background: #555;
+            font-size: 50px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>red</li>
+        <li>blue</li>
+        <li>green</li>
+        <li>pink</li>
+    </ul>
+
+    <div></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        /*
+            이벤트 메서드
+            탐색 메서드
+            HTML/CSS 메서드
+                text()
+                html()
+                attr()
+                css()
+
+            효과 메서드 -> 내비게이션, 슬라이드 이미지
+                hide()
+                show()
+                fadeIn()
+                fadeOut()
+                slideDown()
+                slideUp()
+                animate()
+                stop()
+
+            $('선택자').text(); ~ 문자열 반환(html태그를 문자열로 인식)
+            $('선택자').text('문자열'); ~ 문자열 설정
+
+            $('선택자').html(); ~ 문자열 반환(html태그를 요소로 인식)
+            $('선택자').html('문자열'); ~ 문자열 설정
+
+
+        */
+        /*
+            색상 이름의 목록 중 하나를 클릭하면 
+            박스의 색의 컬러가 변경되고, -> css()
+            색상 이름이 박스에 표시되도록 하시오. -> text(), html()
+        */
+        $('li').click(function(){
+            // $(this)는 클릭한 li의 매용(문자열)을 가져와서 txt에 할당
+            let txt = $(this).text();
+            $('div').text(txt);
+            $('div').css({background: txt});
+        });
+
+        // li를 클릭하면 함수를 실행
+        /* $('li').on('click', function () {
+            // $(this)란? 클릭한 li
+            // 클릭한 li의 내용(문자열)을 가져와서 txt변수에 할당        
+            var txt = $(this).text();
+            // div이 내용을 txt로 지정한다.
+            $('div').text(txt);
+            // div의 배경색들 txt로 한다.
+            $('div').css({ background: txt });
+        });
+         */
+
+    </script>
+</body>
+
+</html>

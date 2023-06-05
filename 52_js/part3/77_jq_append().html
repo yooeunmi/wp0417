@@ -9,14 +9,25 @@
 </head>
 
 <body>
-    <h1>텍스트 노드를 사용하는 새로운 요소 추가하기</h1>
-    <div id="info"></div>
+    <h1>새로운 요소 추가하기</h1>
+    <div>내용</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            A.append(b) ~ A요소 끝에 b 삽입
+            before<div>prepend내용append</div>after
+
+            A에 b를 추가(삽입)
+            A.append(b) ~ 내용 끝
+            A.prepend(b) ~ 내용 앞
+            A.after(b) ~ 끝태그 뒤 
+            A.before(b) ~ 시작태그 앞
         */
+
+       $('div').append('사과');
+       $('div').prepend('딸기');
+       $('div').after('수박');
+       $('div').before('참외');
 
     </script>
 </body>

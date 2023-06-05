@@ -28,12 +28,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('선택자').html(); ~ HTML 구조 반환
-            $('선택자').html('HTML 구조'); ~ HTML 구조 설정
+            $('선택자').text(); ~ 문자열 가져오기(HTML 태그를 문자열 취급)
+            $('선택자').text('문자열'); ~ 문자열 지정하기(설정)
+
+            $('선택자').html(); ~ 문자열 가져오기(HTML 태그를 요소 취급)
+            $('선택자').html('문자열'); ~ 문자열 지정하기(설정)
         */
 
 
+        // 버튼을 클릭하면
         $('button').on('click', function () {
+            // <h1>태그도 문자열로 취급
+            //$('div').text('<h1>변경후 입니다.</h1>');
+            // <h1>태그를 HTML 태그로 취급
             $('div').html('<h1>변경후 입니다.</h1>');
         });
 

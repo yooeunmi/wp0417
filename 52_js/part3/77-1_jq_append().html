@@ -9,14 +9,20 @@
 </head>
 
 <body>
-    <h1>속성 값이 있는 새로운 요소 추가하기</h1>
-    <div id="info"></div>
+    <h1>이미지 요소 추가하기</h1>
+    <div></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
             A.append(b) ~ A요소 끝에 b 삽입
         */
+        /* 
+            div 요소 내용 끝에 이미지를 삽입하시오.
+            이미지: ../assets/pic_1.jpg
+        */
+       const img = '<img src="../assets/pic_1.jpg" alt="이미지">'
+       $('div').append(img);
 
     </script>
 </body>

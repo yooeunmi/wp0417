@@ -46,22 +46,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script>
         /* 
+            이벤트 메서드 ~ 마우스
+            탐색 메서드 ~ 요소 선택
+            효과 메서드
+
             $('선택자').hide() ~ 숨김
             $('선택자').show() ~ 보임
             $('선택자').fadeOut(시간) ~ 서서히 숨김
             $('선택자').fadeIn(시간) ~ 서서히 보임
+            자바스크립트 시간: ms(밀리초)
+            1s = 1000ms
         */
 
 
+        // 첫 번째 li 클릭하면
         $('li').eq(0).on('click', function () {
             $('.box1').hide();
         });
+        // 두 번째 li 클릭하면
         $('li').eq(1).on('click', function () {
             $('.box1').show();
         });
+        // 세 번째 li 클릭하면
         $('li').eq(2).on('click', function () {
             $('.box2').fadeOut();
         });
+        // 네 번째 li 클릭하면
         $('li').eq(3).on('click', function () {
             $('.box2').fadeIn();
         });

@@ -8,15 +8,18 @@
     <title>HTML+CSS+JS</title>
     <style>
         div {
+            position: absolute;
+            top: 300px;
             width: 200px;
             height: 200px;
             background: blue;
-            margin-top: 300px;
         }
     </style>
 </head>
 
 <body>
+    <button>버튼</button>
+    <span>결과</span>
     <div></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
@@ -24,7 +27,20 @@
         /* 
             $('선택자').offset().top ~ 창 끝에서 요소의 y축 위치 반환
         */
+        /* 
+            버튼을 클릭하면
+            div의 창 위에서 떨어진 거리를 span 요소에 내용으로 표시하시오.
 
+            메서드: offset()
+            속성: top
+        */
+        // 버튼을 클릭하면 함수 실행
+        $('button').click(function(){
+            // div의 창 위에서부터 떨어진 거리
+            let ot = $('div').offset().top;
+            // span에 ot 출력
+            $('span').text(ot);
+        });
 
     </script>
 </body>

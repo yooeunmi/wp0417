@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이션</title>
+    <style>
+        /* 공통 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        body {
+            font-size: 14px;
+            background: #fff;
+            color: #333;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* 네비게이션 */
+        nav {
+            position: absolute;
+            top: 35px;
+            right: 30px;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .main>li {
+            float: left;
+            width: 150px;
+        }
+
+        .main>li a {
+            display: block;
+            color: #fff;
+        }
+
+        .main>li>a {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 5px;
+            background: #0066ad;
+        }
+
+        .main>li a:hover {
+            background: #30a3f3;
+        }
+
+        .sub {
+            display: none;
+        }
+
+        .sub li {
+            background: rgba(0, 102, 173, 0.5);
+            padding: 5px 0;
+        }
+
+        .sub li:first-child {
+            padding-top: 10px;
+        }
+
+        .sub li:last-child {
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="main">
+            <li><a href="#">강원천문대</a>
+                <ul class="sub">
+                    <li><a href="#">천문대소개</a></li>
+                    <li><a href="#">인사말</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+            </li>
+            <li><a href="#">이용안내</a>
+                <ul class="sub">
+                    <li><a href="#">프로그램</a></li>
+                    <li><a href="#">관람시간표</a></li>
+                    <li><a href="#">이달의 별자리</a></li>
+                </ul>
+            </li>
+            <li><a href="#">천문대예약</a>
+                <ul class="sub">
+                    <li><a href="#">예약하기</a></li>
+                    <li><a href="#">예약확인</a></li>
+                    <li><a href="#">예약취소</a></li>
+                </ul>
+            </li>
+            <li><a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">방문후기</a></li>
+                    <li><a href="#">자유게시판</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

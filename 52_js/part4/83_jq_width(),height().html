@@ -22,11 +22,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('선택자').width() ~ 요소의 너비 반환
+            $('선택자').width() ~ 요소의 너비 반환(가져온다.)
             $('선택자').height() ~ 요소의 높이 반환
-            $('선택자').width(값) ~ 요소의 너비 설정
+            $('선택자').width(값) ~ 요소의 너비 설정(지정한다.)
             $('선택자').height(값) ~ 요소의 높이 설정
         */
+       /* 
+            div를 클릭하면
+            div의 높이를 div의 너비로 지정하시오.
+       */
+      // div를 클릭하면 함수를 실행
+      $('div').click(function(){
+            // div의 너비를 가져온다.
+            let w = $('div').width();
+            // div의 높이를 div의 너비로 지정한다.
+            $('div').height(w);
+      });
 
     </script>
 </body>

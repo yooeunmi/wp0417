@@ -38,7 +38,26 @@
             $('선택자').addClass('클래스') ~ 요소의 클래스 추가
             $('선택자').removeClass('클래스') ~ 요소의 클래스 제거
         */
-
+        /* 
+            첫 번째 목록을 클릭하면
+            div에 on클래스를 추가하고
+            두 번째 목록을 클릭하면
+            div에 on클래스를 제거하시오.
+        */
+        // 첫 번째 목록
+        // $('li:nth-child(1)') ~ CSS선택자
+        // $('li:eq(0)') ~ jQuery선택자
+        // $('li').eq(0) ~jQuery메서드
+        // 첫 번째 목록을 클릭하면 함수 실행
+        $('li').eq(0).click(function(){
+            //div에 on클래스 추가 -> div가 커지면서 빨강
+            $('div').addClass('on');
+        });
+        // 두 번째 목록을 클릭하면 함수 실행
+        $('li').eq(1).click(function(){
+            //div에 on클래스를 제거
+            $('div').removeClass('on');
+        });
     </script>
 </body>
 

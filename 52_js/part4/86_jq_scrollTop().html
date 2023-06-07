@@ -28,8 +28,20 @@
         /* 
             $(window).scrollTop() ~ 창에서 스크롤한 양 반환
         */
+        /* 
+            윈도우에 스크롤바가 움직이면
+            스크롤바의 스크롤양을 p요소에 표시하시오.
 
-
+            메서드:  scrollTop()
+        */
+        //윈도우의 스크롤 이벤트가 발생하면 함수 실행
+        $(window).scroll(function(){
+            // 윈도우 스크롤바의 스크롤양을 st에 저장
+            let st = $(window).scrollTop();
+            // p요소에 st를 출력한다.
+            $('p').text(st);
+        });
+        
     </script>
 </body>
 

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이션_유은미</title>
+    <style>
+        /* 공통 */
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-size: 1.5rem;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* 글꼴 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+        /* 네비게이션 */
+        .nav_bg {
+            width: 100%;
+            background: #0066ad;
+        }
+
+        nav {
+            width: 800px;
+            text-align: center;
+        }
+
+        /* 1depth */
+        .main {
+            display: flex;
+        }
+
+        .main>li {
+            width: 150px;
+        }
+
+        /* 메인메뉴 */
+        .main>li>a {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 5px;
+            color: #fff;
+            background: #0066ad;
+        }
+
+        .main>li>a:hover {
+            background: #30a3f3;
+            color: #fff;
+        }
+
+        /* 서브메뉴 */
+        .sub {
+            display: none;
+            background: rgba(0, 102, 173, 0.5);
+        }
+
+        .sub li a {
+            padding: 4px 8px;
+            color: #fff;
+            line-height: 2;
+        }
+
+        .sub li a:hover {
+            background: rgb(2, 54, 92);
+            color: #fff;
+        }
+
+        .sub li:first-child {
+            padding-top: 10px;
+        }
+
+        .sub li:last-child {
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 내비게이션 -->
+    <div class="nav_bg">
+        <nav>
+            <ul class="main">
+                <li><a href="#">축제소개</a>
+                    <ul class="sub">
+                        <li><a href="#">Festival 소개</a></li>
+                        <li><a href="#">행사장 안내</a></li>
+                        <li><a href="#">조직위원회</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">예약안내</a>
+                    <ul class="sub">
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인/취소</a></li>
+                        <li><a href="#">단체예약문의</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">아티스트</a>
+                    <ul class="sub">
+                        <li><a href="#">고릴라즈</a></li>
+                        <li><a href="#">메이저 레이저</a></li>
+                        <li><a href="#">아우스게인</a></li>
+                        <li><a href="#">타임로드</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">사진갤러리</a></li>
+                        <li><a href="#">영상갤러리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- 제이쿼리 라이브러리 파일 CDN 방식으로 연결 : https://cdnjs.com/libraries/jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 내비게이션바
+        $(".main > li").mouseenter(function () {
+            $(".sub").stop().slideDown();
+        });
+        $(".main > li").mouseleave(function () {
+            $(".sub").stop().slideUp();
+        });
+    </script>
+</body>
+
+</html>

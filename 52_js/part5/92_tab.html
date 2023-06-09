@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+    <style>
+        /* 
+        body * {outline: 1px solid red;} 
+        */
+
+        .tab {
+            position: relative;
+            width: 420px;
+        }
+
+        .tabBtn {            
+            /* 탭 버튼 가로 배치 */
+            display: flex;
+        }
+
+        .tabBtn li {   
+            width: 50px;
+            list-style: none;
+            padding: 4px 12px;         
+            background: #0066ad;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .tabBtn li.on {
+            background: #00101b;
+        }
+
+        .tabCont {
+            position: absolute;
+            display: none;
+            background: #00101b;
+            padding: 0 24px;
+            color: #fff;
+        }  
+        
+        .tabCont:first-of-type {display: block;}
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <ul class="tabBtn clearfix">
+            <li class="on">탭1</li>
+            <li>탭2</li>
+            <li>탭3</li>
+            <li>탭4</li>
+        </ul>
+        <div class="tabCont tab1">
+            <h2>탭의 첫 번째 내용</h2>
+            <p>탭1을 클릭하면 탭2의 내용을 숨기고, 탭2를 클릭하면 탭1의 내용을 숨긴다.</p>
+        </div>
+        <div class="tabCont tab2">
+            <h2>탭의 두 번째 내용</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id necessitatibus velit, magni suscipit facilis
+                quidem voluptate perspiciatis rem sit natus quae consequatur labore nobis deserunt quibusdam minima
+                nesciunt, modi fugit!</p>
+        </div>
+        <div class="tabCont tab3">
+            <h2>탭의 세 번째 내용</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id necessitatibus velit, magni suscipit facilis
+                quidem voluptate perspiciatis rem sit natus quae consequatur labore nobis deserunt quibusdam minima
+                nesciunt, modi fugit!</p>
+        </div>
+        <div class="tabCont tab4">
+            <h2>탭의 네 번째 내용</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id necessitatibus velit, magni suscipit facilis
+                quidem voluptate perspiciatis rem sit natus quae consequatur labore nobis deserunt quibusdam minima
+                nesciunt, modi fugit!</p>
+        </div>
+    </div>
+    <!-- 제이쿼리 라이브러리 파일 CDN 방식으로 연결 : https://cdnjs.com/libraries/jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 탭 메뉴
+        // .tabBtn의 li를 클릭하면 함수 실행
+        $(".tabBtn li").click(function () {
+            // 자바스크립트 최신은 6버전까지 나옴(ecma)
+            // css는 3버전(4버전도 나오고 있음)
+            // html은 5버전
+            // this? 클릭 li
+            // 클릭한 li의 색인 번호(순번:0, 1, 2, ...)를 가져와서 i에 저장
+            // 탭1을 클릭하면 index는 0
+            // 탭2를 클릭하면 index는 1
+            let i = $(this).index();
+            // 모든 버튼의 on클래스 제거
+            $('.tabBtn li').removeClass('on');
+            // .tabCont 모두 숨김
+            $(".tabCont").css({display: "none"});
+            // .tabCont 중에서 eq(i) 번째 요소는 보임
+            $(".tabCont").eq(i).css({display: "block"});
+            // 클릭한 버튼만 on클래스 추가
+            $(this).addClass('on');
+        });
+    </script>
+</body>
+
+</html>

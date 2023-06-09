@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이션</title>
+    <style>
+        /* 공통 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            /* color: #333; */
+        }
+
+        /* rem: html태그에서 지정한 글자 크기의 배수 */
+        body {
+            font-size: 1.5rem;
+            /* 15px */
+            /* background: #fff; */
+            /* color: #333; */
+        }
+
+        /* 네비게이션 */
+        nav {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+
+        .nav_bg {
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 32px;
+            width: 100%;
+            background: rgba(0, 102, 173, 0.7);
+        }
+
+        /* 1depth */
+        .main {
+            display: flex;
+            justify-content: center;
+            background: #0066ad;
+            height: 34px;
+        }
+
+        .main>li {
+            width: 150px;
+        }
+
+        /* 메인메뉴만 */
+        .main>li>a {
+            display: block;
+            /* block는 width가 100% */
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 5px;
+            color: #fff;            
+        }
+
+        .main>li>a:hover {
+            background: #30a3f3;
+            color: #333;
+        }
+
+        /* 2depth */
+        .sub {
+            display: none;
+        }
+
+        .sub li a {
+            padding: 4px 8px;
+            color: #333;
+            line-height: 2;
+        }
+
+        .sub li a:hover {
+            background: rgb(16, 117, 188);
+            color: #fff;
+        }
+
+        .sub li:first-child {
+            padding-top: 10px;
+        }
+
+        .sub li:last-child {
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_bg"></div>
+        <ul class="main">
+            <li><a href="#">강원천문대</a>
+                <ul class="sub">
+                    <li><a href="#">천문대소개</a></li>
+                    <li><a href="#">인사말</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+            </li>
+            <li><a href="#">이용안내</a>
+                <ul class="sub">
+                    <li><a href="#">프로그램</a></li>
+                    <li><a href="#">관람시간표</a></li>
+                    <li><a href="#">이달의 별자리</a></li>
+                </ul>
+            </li>
+            <li><a href="#">천문대예약</a>
+                <ul class="sub">
+                    <li><a href="#">예약하기</a></li>
+                    <li><a href="#">예약확인</a></li>
+                    <li><a href="#">예약취소</a></li>
+                </ul>
+            </li>
+            <li><a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">방문후기</a></li>
+                    <li><a href="#">자유게시판</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 제이쿼리 라이브러리 파일 CDN 방식으로 연결 : https://cdnjs.com/libraries/jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 내비게이션바
+        $(".main > li").mouseenter(function () {
+            $(".sub").stop().slideDown();
+            $('.nav_bg').stop().animate({ height: 150 });
+        });
+        $(".main > li").mouseleave(function () {
+            $(".sub").stop().slideUp();
+            $('.nav_bg').stop().animate({ height: 0 });
+        });
+    </script>
+</body>
+
+</html>
